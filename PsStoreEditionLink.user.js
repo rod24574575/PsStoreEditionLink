@@ -7,8 +7,8 @@
 // @author          rod24574575
 // @homepageURL     https://github.com/rod24574575/PsStoreEditionLink
 // @supportURL      https://github.com/rod24574575/PsStoreEditionLink/issues
-// @updateURL       https://gist.github.com/rod24574575/23c88840b5c14d6bc5c61c5836a01db1/raw/1032d4984b6a334ce1f922ba4f8afd0552279af8/PsStoreEditionLink.user.js
-// @downloadURL     https://gist.github.com/rod24574575/23c88840b5c14d6bc5c61c5836a01db1/raw/1032d4984b6a334ce1f922ba4f8afd0552279af8/PsStoreEditionLink.user.js
+// @updateURL       https://gist.github.com/rod24574575/23c88840b5c14d6bc5c61c5836a01db1/raw/PsStoreEditionLink.user.js
+// @downloadURL     https://gist.github.com/rod24574575/23c88840b5c14d6bc5c61c5836a01db1/raw/PsStoreEditionLink.user.js
 // @match           *://*.store.playstation.com/*
 // @run-at          document-idle
 // ==/UserScript==
