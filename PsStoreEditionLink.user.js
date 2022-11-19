@@ -3,6 +3,7 @@
 // @namespace       PsStoreEditionLink
 // @description     Add hyperlink to the other editions in playstation store.
 // @version         0.1.0
+// @license         MIT
 // @author          rod24574575
 // @homepageURL     https://github.com/rod24574575/PsStoreEditionLink
 // @supportURL      https://github.com/rod24574575/PsStoreEditionLink/issues
