@@ -1,6 +1,6 @@
 {
   "name": "ps-store-edition-link",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Add hyperlink to the other editions in playstation store",
   "keywords": [
     "userscript"
