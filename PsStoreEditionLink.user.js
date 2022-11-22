@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            PsStoreEditionLink
 // @namespace       PsStoreEditionLink
-// @description     Add hyperlink to the other editions in playstation store.
+// @description     Add hyperlink to the other editions in playstation store
 // @version         0.1.0
 // @license         MIT
 // @author          rod24574575
@@ -28,9 +28,9 @@
           return null;
         }
 
-        rawSku = sku
+        rawSku = sku;
       } catch {
-        return
+        return null;
       }
 
       const lastDashIndex = rawSku.lastIndexOf('-');
@@ -82,9 +82,9 @@
       parent.insertBefore(anchor, editorTitleEl);
       anchor.appendChild(editorTitleEl);
     }
-  };
+  }
 
-  const timer = window.setInterval(() => {
+  let timer = window.setInterval(() => {
     if (!document.querySelector('[data-qa="mfeUpsell"]:not([data-reactroot])')) {
       return;
     }

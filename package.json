@@ -1,0 +1,27 @@
+{
+  "name": "ps-store-edition-link",
+  "version": "0.1.0",
+  "description": "Add hyperlink to the other editions in playstation store",
+  "keywords": [
+    "userscript"
+  ],
+  "homepage": "https://github.com/rod24574575/PsStoreEditionLink",
+  "bugs": "https://github.com/rod24574575/PsStoreEditionLink/issues",
+  "license": "MIT",
+  "author": "rod24574575 <rod24574575@hotmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rod24574575/PsStoreEditionLink.git"
+  },
+  "scripts": {
+    "bump": "bump package.json PsStoreEditionLink.user.js -c -a -t",
+    "lint": "eslint .",
+    "preversion": "npm run lint",
+    "version": "npm install"
+  },
+  "devDependencies": {
+    "eslint": "^8.28.0",
+    "version-bump-prompt": "^6.1.0"
+  },
+  "private": true
+}
