@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         PsStoreEditionLink
+// @name         Links for Game Editions in PlayStation Store
 // @namespace    https://github.com/rod24574575
 // @description  Add hyperlink to the other editions in playstation store
-// @version      0.2.0
+// @version      1.0.0
 // @license      MIT
 // @author       rod24574575
 // @homepage     https://github.com/rod24574575/PsStoreEditionLink
