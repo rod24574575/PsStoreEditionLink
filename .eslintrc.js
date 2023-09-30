@@ -7,4 +7,12 @@ module.exports = {
     greasemonkey: true,
     es2020: true,
   },
+  overrides: [
+    {
+      extends: "plugin:userscripts/recommended",
+      files: [
+        '*.user.js',
+      ],
+    },
+  ],
 };
