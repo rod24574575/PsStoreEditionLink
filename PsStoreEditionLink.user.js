@@ -1,21 +1,29 @@
 // ==UserScript==
-// @name            PsStoreEditionLink
-// @namespace       PsStoreEditionLink
-// @description     Add hyperlink to the other editions in playstation store
-// @version         0.2.0
-// @license         MIT
-// @author          rod24574575
-// @homepageURL     https://github.com/rod24574575/PsStoreEditionLink
-// @supportURL      https://github.com/rod24574575/PsStoreEditionLink/issues
-// @updateURL       https://gist.github.com/rod24574575/23c88840b5c14d6bc5c61c5836a01db1/raw/PsStoreEditionLink.user.js
-// @downloadURL     https://gist.github.com/rod24574575/23c88840b5c14d6bc5c61c5836a01db1/raw/PsStoreEditionLink.user.js
-// @match           *://*.store.playstation.com/*
-// @run-at          document-idle
+// @name         PsStoreEditionLink
+// @namespace    https://github.com/rod24574575
+// @description  Add hyperlink to the other editions in playstation store
+// @version      0.2.0
+// @license      MIT
+// @author       rod24574575
+// @homepage     https://github.com/rod24574575/PsStoreEditionLink
+// @homepageURL  https://github.com/rod24574575/PsStoreEditionLink
+// @supportURL   https://github.com/rod24574575/PsStoreEditionLink/issues
+// @updateURL    https://gist.github.com/rod24574575/23c88840b5c14d6bc5c61c5836a01db1/raw/PsStoreEditionLink.user.js
+// @downloadURL  https://gist.github.com/rod24574575/23c88840b5c14d6bc5c61c5836a01db1/raw/PsStoreEditionLink.user.js
+// @match        *://*.store.playstation.com/*
+// @run-at       document-idle
 // ==/UserScript==
+
+// @ts-check
 
 (function() {
   function run() {
+    /**
+     * @param {string} trackString
+     * @returns {string | null}
+     */
     function findSkuId(trackString) {
+      /** @type {string} */
       let rawSku;
       try {
         const track = JSON.parse(trackString);
@@ -41,13 +49,17 @@
       return rawSku.slice(0, lastDashIndex);
     }
 
+    /**
+     * @param {string} id
+     * @returns {string}
+     */
     function createProductUrl(id) {
       const href = location.href;
 
       const pattern = '/product/';
       const productStringIndex = href.indexOf(pattern);
       if (productStringIndex < 0) {
-        return null;
+        return '';
       }
       return href.slice(0, productStringIndex + pattern.length) + id;
     }
@@ -84,6 +96,7 @@
     }
   }
 
+  /** @type {number | undefined} */
   let timer = window.setInterval(() => {
     if (!document.querySelector('[data-qa="mfeUpsell"]:not([data-reactroot])')) {
       return;
