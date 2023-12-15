@@ -10,11 +10,14 @@
 // @supportURL   https://github.com/rod24574575/PsStoreEditionLink/issues
 // @updateURL    https://gist.github.com/rod24574575/23c88840b5c14d6bc5c61c5836a01db1/raw/PsStoreEditionLink.user.js
 // @downloadURL  https://gist.github.com/rod24574575/23c88840b5c14d6bc5c61c5836a01db1/raw/PsStoreEditionLink.user.js
-// @match        *://*.store.playstation.com/*
+// @match        *://store.playstation.com/*/product/*
+// @match        *://store.playstation.com/*/concept/*
+// @match        *://www.playstation.com/*/games/*
 // @run-at       document-idle
 // ==/UserScript==
 
 // @ts-check
+'use strict';
 
 (function() {
   function run() {
@@ -54,14 +57,12 @@
      * @returns {string}
      */
     function createProductUrl(id) {
-      const href = location.href;
-
-      const pattern = '/product/';
-      const productStringIndex = href.indexOf(pattern);
-      if (productStringIndex < 0) {
+      const match = location.href.match(/\.playstation\.com\/([^/]+)\//i);
+      if (!match) {
         return '';
       }
-      return href.slice(0, productStringIndex + pattern.length) + id;
+      const locale = match[1];
+      return `${location.protocol}//store.playstation.com/${locale}/product/${id}`;
     }
 
     for (const productEditionEl of document.querySelectorAll('article[data-qa^="mfeUpsell#productEdition"]')) {
