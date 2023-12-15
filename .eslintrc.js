@@ -1,7 +1,7 @@
 /* eslint-env node */
 module.exports = {
   root: true,
-  extends: "eslint:recommended",
+  extends: 'eslint:recommended',
   env: {
     browser: true,
     greasemonkey: true,
@@ -9,7 +9,7 @@ module.exports = {
   },
   overrides: [
     {
-      extends: "plugin:userscripts/recommended",
+      extends: 'plugin:userscripts/recommended',
       files: [
         '*.user.js',
       ],

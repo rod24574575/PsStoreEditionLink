@@ -21,10 +21,10 @@
   },
   "packageManager": "pnpm@8.8.0",
   "devDependencies": {
-    "@types/tampermonkey": "^4.20.3",
-    "eslint": "^8.50.0",
+    "@types/tampermonkey": "^5.0.2",
+    "eslint": "^8.55.0",
     "eslint-plugin-userscripts": "^0.4.0",
-    "typescript": "^5.2.2",
+    "typescript": "^5.3.3",
     "version-bump-prompt": "^6.1.0"
   },
   "private": true
